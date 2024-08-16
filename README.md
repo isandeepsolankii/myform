@@ -95,6 +95,82 @@ $mail->Password = 'your-app-password'(16 digits passwords);
 $mail->Host = 'smtp.gmail.com';
 ```
 
+## For Custom Form Validation
+
+This project includes a contact form integrated with PHP and PHPMailer, featuring custom validation to ensure users fill in the required details correctly before submission. The validation scripts, including email validation, are located in the "Validation" folder.
+
+### Steps to add validation to form
+
+1. Ensure that all fields in the form are being validated. You can adjust the validation rules as per your requirements.
+
+2. Add a name "contactFormEmail" to the form and verify it in your JavaScript file.
+
+```
+<form name = "contactFormEmail" method = "post" action = "your php file location">
+
+```
+
+3. Check the id property of each field in the HTML and JavaScript files to ensure they match.
+
+4. Assign the class "item" to each input field in the form.
+
+```
+<input class= "item">
+```
+
+5. Wrap each form field in a div and assign the class "field" to the div.
+
+```
+<div class = "field">
+```
+
+6. Add an error message in the same div with the class "error-txt" to display validation errors.
+
+```
+<div class = "error-txt">
+```
+
+7. Don't forget to copy the necessary CSS for the field, error-txt, and item classes.
+
+```
+<style>
+.field .item {
+        border-color: #3990df;
+      }
+
+      .error-txt {
+        font-size: 12px;
+        color: red;
+        text-align: left;
+        margin: 5px 0 0 0;
+        display: none;
+      }
+
+      .field.error .item {
+        border-color: red;
+      }
+
+      .field.error .error-txt {
+        display: block;
+      }
+    </style>
+```
+
+For reference, here is a sample code snippet for one field:
+
+<div class=" field">
+    <label for="email" class="form-label">Email Address</label>
+    <input
+    type="email"
+    class="item"
+    id="email"
+    name="email"
+    placeholder="Enter your email"
+    />
+    <div class="error-txt email">Email cannot be blank</div>
+</div>
+```
+
 ### Conclusion:
 
 By following these steps, your form should be up and running. If you encounter any issues, double-check your code and settings, especially the form and PHPMailer configuration.
