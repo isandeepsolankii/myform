@@ -95,7 +95,7 @@ $mail->Password = 'your-app-password'(16 digits passwords);
 $mail->Host = 'smtp.gmail.com';
 ```
 
-## For Custom Form Validation
+# For Custom Form Validation
 
 This project includes a contact form integrated with PHP and PHPMailer, featuring custom validation to ensure users fill in the required details correctly before submission. The validation scripts, including email validation, are located in the "Validation" folder.
 
@@ -158,6 +158,7 @@ This project includes a contact form integrated with PHP and PHPMailer, featurin
 
 For reference, here is a sample code snippet for one field:
 
+```
 <div class=" field">
     <label for="email" class="form-label">Email Address</label>
     <input
